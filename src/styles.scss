@@ -18,7 +18,25 @@ button {
     -webkit-transition: 0.35s ease;
     transition: 0.35s ease;
 }
+.login-btn {
+    background-color: $color-primary;
+    height: 60px;
+    width: 118px;
+    border-radius: 6px;
+    color: $color-text-light;
+    font-size: 18px;
 
+    &:hover {
+        border: 2px solid $color-primary;
+        background-color: $color-bg;
+        color: $color-primary;
+    }
+}
+.cart-btn {
+    @extend .login-btn;
+    width: 299px;
+    height: 49px;
+}
 /*Containers*/
 .container {
     max-width: 1550px;

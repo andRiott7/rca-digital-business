@@ -1,14 +1,14 @@
 <!-- Header -->
 <header>
-    <div class="container">
+    <div class="container pt-3">
         <div class="row justify-content-around align-items-center">
-            <div class="logo col-6 text-left">
+            <div class="logo col-6 d-flex flex-row justify-content-start align-items-center text-left">
                 <img src="assets/img/logo.png" class="img-fluid" alt="RCA logo">
                 <div class="title-page">
                     <h2> Products </h2>
                 </div>
             </div>
-            <div class="login col-6 text-right">
+            <div class="login col-6 d-flex flex-row justify-content-end align-items-center">
                 <div class="user-name">
                     Welcome Tom
                 </div>
@@ -31,9 +31,31 @@
 <section class="products">
     <div class="container">
         <div class="row justify-content-around align-items-center">
+            <div class="title text-left">
+                Products
+            </div>
+            <div class="cart d-flex flex-row align-items-center">
+                <img src="assets/img/cart.png" class="img-fluid" alt="Shopping cart">
+                <div class="cart-counter"> 1 </div>
+            </div>
         </div>
         <div class="row">
             <div class="product-item">
+                <div class="header">
+                    <div class="title-product">
+                        <h3> TLOU 2 </h3>
+                    </div>
+                    <div class="category-product">
+                        <h4> PS4 </h4>
+                    </div>
+                    <div class="price text-center">
+                        $ 199
+                    </div>
+                </div>
+                <div class="img-product text-center">
+                    <img src="assets/img/product_01.png" class="img-fluid" alt="Product image">
+                </div>
+                <button class="cart-btn" type="button"> Add to Cart </button>
             </div>
         </div>
     </div>
@@ -42,7 +64,12 @@
 <footer>
     <div class="container">
         <div class="row justify-content-around align-items-center">
+            <div class="logo col-12 col-lg-6 text-left">
+                <img src="assets/img/logo.png" class="img-fluid" alt="RCA logo">
+            </div>
+            <div class="text col-12 col-lg-6 text-right">
+                Teste front-end 2021 - RCA Digital
+            </div>
         </div>
     </div>
 </footer>
-

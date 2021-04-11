@@ -5,9 +5,16 @@ header {
         height: 101px;
         width: 244px;
     }
-    .login-btn {
-        height: 60px;
-        width: 118px;
+    .title-page > h2 {
+        font-size: 22px;
+        font-family: $font-stack-primary;
+        color: $color-primary;
+    }
+    .user-name {
+        font-size: 18px;
+        font-weight: $font-light;
+        color: $color-primary;
+        padding-right: 3rem;
     }
 }
 /*Products Section*/
@@ -19,20 +26,37 @@ header {
     }
     .product-item {
         background-color: $color-bg;
-        .title-product {
-            font-size: 33px;
-        }
-        .category-product {
-            font-size: 14px;
-        }
-        .price {
-            font-size: 33px;
-            height: 78px;
-            width: 119px;
-            color: $color-text-light;
-            background-color: $gray;
+        position: relative;
+        padding: 18px 16px 32px 16px;
+
+        .header {
+            margin-bottom: 32px;
+            .title-product {
+                font-size: 33px;
+            }
+            .category-product {
+                font-size: 14px;
+            }
+            .price {
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 33px;
+                height: 78px;
+                width: 119px;
+                color: $color-text-light;
+                background-color: $gray;
+                border-radius: 0 0 6px 6px;
+            }
         }
 
+        .img-product {
+        }
+        .cart-btn {
+            margin-top: 19px;
+            margin-bottom: 32px;
+
+        }
     }
 }
 /*Footer*/
