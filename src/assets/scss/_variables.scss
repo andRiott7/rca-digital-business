@@ -1,0 +1,40 @@
+/*Descriptive colors*/
+$black: #080808;
+$gray-dark: #272727;
+$gray: #333333;
+$gray-light: #d8c4c4;
+$gray-lighter: #fafafa;
+$blue: #3877a1;
+$red: #d55454;
+$white: #ffffff;
+/*Functional colors*/
+$color-primary: $blue;
+$color-secondary: $gray;
+$color-title: $gray;
+$color-text: $gray;
+$color-text-light: $white;
+// Backgrounds
+$color-bg: $white;
+$color-bg-secondary: $gray-lighter;
+$colog-bg-dark: $gray-dark;
+// Borders
+// $long-rule-light: 2px solid rgba($white, 0.35);
+// $solid-rule-primary: 1px solid $color-primary;
+// Fonts
+$font-stack-primary: "Helvetica Now", Helvetica, Arial, sans-serif;
+$font-stack-light: "Helvetica Now Light", Helvetica, Arial, sans-serif;
+$font-stack-serif: serif;
+// Letter Spacings
+$space-xs: 0.015ch;
+$space-sm: 0.03ch;
+$space-md: 0.0325ch;
+$space-lg: 0.05ch;
+$space-xl: 0.225ch;
+$space-xxl: 0.5ch;
+/*Breakpoints*/
+$xs: 480px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1920px;
