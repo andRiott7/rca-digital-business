@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@import "assets/scss/reset";
+@import "assets/scss/variables";
+
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,800&display=swap');
+
+/*Base-Styles*/
+html,
+body {
+    background-color: $color-bg !important;
+    font-family: $font-stack-primary !important;
+    color: $color-text !important;
+    background-color: $color-bg;
+}
+/*Buttons*/
+a,
+button {
+    -webkit-transition: 0.35s ease;
+    transition: 0.35s ease;
+}
+
+/*Containers*/
+.container {
+    max-width: 1550px;
+}

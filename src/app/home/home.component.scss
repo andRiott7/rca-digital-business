@@ -1,0 +1,44 @@
+@import "../../assets/scss/_variables";
+/*Header*/
+header {
+    .logo {
+        height: 101px;
+        width: 244px;
+    }
+    .login-btn {
+        height: 60px;
+        width: 118px;
+    }
+}
+/*Products Section*/
+.products {
+    background-color: $color-bg-secondary;
+    .title {
+        font-family: $font-stack-secondary;
+        font-size: 69px;
+    }
+    .product-item {
+        background-color: $color-bg;
+        .title-product {
+            font-size: 33px;
+        }
+        .category-product {
+            font-size: 14px;
+        }
+        .price {
+            font-size: 33px;
+            height: 78px;
+            width: 119px;
+            color: $color-text-light;
+            background-color: $gray;
+        }
+
+    }
+}
+/*Footer*/
+footer {
+    background-color: $colog-bg-dark;
+    .text {
+        color: $color-primary;
+    }
+}
