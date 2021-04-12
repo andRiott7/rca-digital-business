@@ -15,38 +15,58 @@ header {
         font-weight: $font-light;
         color: $color-primary;
         padding-right: 3rem;
+        display: none;
     }
 }
 /*Products Section*/
 .products {
     background-color: $color-bg-secondary;
+    padding-bottom: 8rem;
     .title {
         font-family: $font-stack-secondary;
         font-size: 69px;
+        font-weight: $font-light;
+    }
+    .cart-counter {
+        font-size: 22px;
+        color: $color-primary;
+        margin-left: 1rem;
+    }
+    .products-list {
+        margin-left: -12px;
+        margin-right: -12px;
     }
     .product-item {
         background-color: $color-bg;
         position: relative;
-        padding: 18px 16px 32px 16px;
+        padding: 16px;
+        margin: 12px;
+        min-width: 368px;
 
         .header {
             margin-bottom: 32px;
-            .title-product {
+            font-weight: $font-bold;
+            font-style: italic;
+            font
+            .title-product > h3 {
                 font-size: 33px;
             }
-            .category-product {
+            .category-product > h4 {
                 font-size: 14px;
+                padding-top: 10px;
+                padding-bottom: 10px;
             }
             .price {
                 position: absolute;
                 top: 0;
                 right: 0;
                 font-size: 33px;
+                padding-top: 16px;
                 height: 78px;
                 width: 119px;
                 color: $color-text-light;
                 background-color: $gray;
-                border-radius: 0 0 6px 6px;
+                border-radius: 0 0 8px 8px;
             }
         }
 
@@ -54,7 +74,7 @@ header {
         }
         .cart-btn {
             margin-top: 19px;
-            margin-bottom: 32px;
+            margin-bottom: 19px;
 
         }
     }
@@ -62,6 +82,8 @@ header {
 /*Footer*/
 footer {
     background-color: $colog-bg-dark;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     .text {
         color: $color-primary;
     }

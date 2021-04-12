@@ -4,8 +4,9 @@ $gray-dark: #272727;
 $gray: #333333;
 $gray-light: #d8c4c4;
 $gray-lighter: #fafafa;
-$blue: #3877a1;
+$gray-purple: #d8c4c4;
 $red: #d55454;
+$blue: #3877a1;
 $white: #ffffff;
 /*Functional colors*/
 $color-primary: $blue;
@@ -13,13 +14,13 @@ $color-secondary: $gray;
 $color-title: $gray;
 $color-text: $gray;
 $color-text-light: $white;
+$color-border: $gray-purple;
 // Backgrounds
 $color-bg: $white;
 $color-bg-secondary: $gray-lighter;
 $colog-bg-dark: $gray-dark;
 // Borders
-// $long-rule-light: 2px solid rgba($white, 0.35);
-// $solid-rule-primary: 1px solid $color-primary;
+$solid-rule-primary: 1px solid $color-border;
 // Fonts
 $font-stack-primary: "Open Sans", Helvetica, Arial, sans-serif;
 $font-stack-secondary: Helvetica, Arial, sans-serif;

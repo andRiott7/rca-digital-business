@@ -34,10 +34,11 @@ button {
 }
 .cart-btn {
     @extend .login-btn;
+    font-size: 14px;
     width: 299px;
     height: 49px;
 }
 /*Containers*/
 .container {
-    max-width: 1550px;
+    max-width: 1580px;
 }
