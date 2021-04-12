@@ -1,0 +1,19 @@
+<div class="product-item" >
+    <div class="header">
+        <div class="title-product">
+            <h3> {{ product.title }}</h3>
+        </div>
+        <div class="category-product">
+            <h4> {{ product.category }} </h4>
+        </div>
+        <div class="price text-center">
+            ${{ product.price }}
+        </div>
+    </div>
+    <div class="img-product text-center">
+        <img [src]="product.imagePath" class="img-fluid" alt="Product image">
+    </div>
+    <div class="text-center">
+        <button class="cart-btn " type="button"> Add to Cart </button>
+    </div>
+</div>

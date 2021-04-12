@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Product } from './product.model'
+import { ProductService } from './product.service';
 
 @Component({
   selector: 'rca-product',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-  constructor() { }
+    @Input() products: Product[];
+
+  constructor(
+      private productService: ProductService,
+      private route: ActivatedRoute,
+      private router: Router,
+
+  ) { }
 
   ngOnInit() {
+      this.products = this.productService.getProducts();
   }
 
 }

@@ -1,19 +1,5 @@
-<div class="product-item">
-    <div class="header">
-        <div class="title-product">
-            <h3> TLOU 2 </h3>
-        </div>
-        <div class="category-product">
-            <h4> PS4 </h4>
-        </div>
-        <div class="price text-center">
-            $199
-        </div>
-    </div>
-    <div class="img-product text-center">
-        <img src="assets/img/product_01.png" class="img-fluid" alt="Product image">
-    </div>
-    <div class="text-center">
-        <button class="cart-btn " type="button"> Add to Cart </button>
-    </div>
+<div class="products-list row justify-content-center align-items-center"  >
+    <product-item *ngFor="let p of products" [product]="p" ></product-item>
 </div>
+
+
