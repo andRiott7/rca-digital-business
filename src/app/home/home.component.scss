@@ -51,11 +51,12 @@ header {
 
 }
 /*Products Section*/
-.products {
-    background-color: $color-bg-secondary;
+.products,
+.cart {
+    background-color: $color-bg;
+    font-family: $font-stack-primary;
     padding-bottom: 8rem;
     .title {
-        font-family: $font-stack-secondary;
         font-size: 69px;
         font-weight: $font-light;
     }

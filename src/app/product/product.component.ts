@@ -10,12 +10,12 @@ import { ProductService } from './product.service';
 })
 export class ProductComponent implements OnInit {
 
-    @Input() products: Product[];
+  products!: Product[];
 
   constructor(
       private productService: ProductService,
       private route: ActivatedRoute,
-      private router: Router,
+      private router: Router
 
   ) { }
 

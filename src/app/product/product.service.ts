@@ -32,6 +32,27 @@ export class ProductService {
             category: 'PS4',
             price: '60',
             imagePath: '../../assets/img/product_04.png'
+        },
+        {
+            id: 5,
+            title: 'Until Down',
+            category: 'PS4',
+            price: '170',
+            imagePath: '../../assets/img/product_05.png'
+        },
+        {
+            id: 6,
+            title: 'Horizon',
+            category: 'PS4, PC',
+            price: '199',
+            imagePath: '../../assets/img/product_06.png'
+        },
+        {
+            id: 7,
+            title: 'Apex',
+            category: 'PS4, XBOX, Nintendo, PC',
+            price: '179',
+            imagePath: '../../assets/img/product_07.png'
         }
     ]
     constructor() { }
