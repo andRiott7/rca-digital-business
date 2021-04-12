@@ -1,0 +1,41 @@
+@import "../../assets/scss/_variables";
+
+.product-item {
+    background-color: $color-bg;
+    position: relative;
+    padding: 16px;
+    margin: 12px;
+    min-width: 368px;
+
+    .header {
+        margin-bottom: 32px;
+        font-weight: $font-bold;
+        font-style: italic;
+        font
+        .title-product > h3 {
+            font-size: 33px;
+        }
+        .category-product > h4 {
+            font-size: 14px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .price {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 33px;
+            padding-top: 16px;
+            height: 78px;
+            width: 119px;
+            color: $color-text-light;
+            background-color: $gray;
+            border-radius: 0 0 8px 8px;
+        }
+    }
+    .cart-btn {
+        margin-top: 19px;
+        margin-bottom: 19px;
+
+    }
+}
