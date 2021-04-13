@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Product } from './product.model';
+import { Product } from './product-item/product.model';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable()
 
 export class ProductService {
+
+
     products: Product[] = [
         {
             id: 1,
@@ -55,9 +59,15 @@ export class ProductService {
             imagePath: '../../assets/img/product_07.png'
         }
     ]
-    constructor() { }
+    constructor( private http: HttpClient) { }
 
     getProducts(): Product[] {
         return this.products;
     }
+
+    // productItem(id: string): Observable<Product[]>{
+    //     return this.http.get(product)
+    //      .map
+    // }
+
 }

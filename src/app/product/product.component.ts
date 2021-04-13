@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Product } from './product.model'
+import { Product } from './product-item/product.model'
 import { ProductService } from './product.service';
 
 @Component({
@@ -23,4 +23,7 @@ export class ProductComponent implements OnInit {
       this.products = this.productService.getProducts();
   }
 
+  addProductItem(product: Product) {
+    console.log(product)
+  }
 }
