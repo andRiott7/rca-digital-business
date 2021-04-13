@@ -13,6 +13,7 @@ import { RouterModule } from '@angular/router';
 import { ProductItemComponent } from './product/product-item/product-item.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ShoppingCartService } from './shopping-cart/shopping-cart.service';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import { ShoppingCartService } from './shopping-cart/shopping-cart.service';
         HomeComponent,
         ProductComponent,
         ProductItemComponent,
-        ShoppingCartComponent
+        ShoppingCartComponent,
+        LoginComponent
     ],
     imports: [
         BrowserModule,

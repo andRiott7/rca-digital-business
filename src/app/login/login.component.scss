@@ -1,0 +1,40 @@
+@import "../../assets/scss/_variables";
+
+.login {
+    position: relative;
+    .user-name {
+        font-size: 18px;
+        font-weight: $font-light;
+        color: $color-primary;
+        padding-right: 3rem;
+        display: none;
+    }
+    .login-panel {
+        position: absolute;
+        top: 4.5rem;
+        right: -6.5rem;
+        form {
+            background-color: $color-bg;
+            padding: 28px;
+            border: 1px solid $color-border;
+            border-radius: 6px;
+            width: 350px;
+            height: auto;
+            input {
+                min-height: 60px;
+                border-radius: 6px;
+                border: 1px solid $color-border;
+                color: $color-primary;
+                &::placeholder {
+                    color: $color-primary;
+                    font-size: 22px;
+                    font-weight: $font-light;
+                }
+            }
+            .login-btn {
+                height: 60px;
+                width: 100%;
+            }
+        }
+    }
+}
