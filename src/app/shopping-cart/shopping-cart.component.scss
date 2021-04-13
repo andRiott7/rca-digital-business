@@ -1,0 +1,25 @@
+@import "../../assets/scss/_variables";
+.shopping-cart {
+    color: $color-text-secondary;
+    font-size: 30px;
+    .product-img {
+        height: 145px;
+        width: 126px;
+    }
+    .category-product > h4 {
+        color: $color-text;
+        font-size: 14px;
+        font-weight: $font-bold;
+        font-style: italic;
+    }
+    .value-btn {
+        background: transparent;
+    }
+    .counter {
+        padding: 4px;
+    }
+    .total-value {
+        font-weight: $font-bold;
+    }
+
+}

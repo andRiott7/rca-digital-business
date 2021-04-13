@@ -2,6 +2,7 @@
 $black: #080808;
 $gray-dark: #272727;
 $gray: #333333;
+$gray-smoke: #707070;
 $gray-light: #d8c4c4;
 $gray-lighter: #fafafa;
 $gray-purple: #d8c4c4;
@@ -13,6 +14,7 @@ $color-primary: $blue;
 $color-secondary: $gray;
 $color-title: $gray;
 $color-text: $gray;
+$color-text-secondary: $gray-smoke;
 $color-text-light: $white;
 $color-border: $gray-purple;
 // Backgrounds
@@ -21,6 +23,7 @@ $color-bg-secondary: $gray-lighter;
 $colog-bg-dark: $gray-dark;
 // Borders
 $solid-rule-primary: 1px solid $color-border;
+$solid-rule-secondary: 1px solid $color-text-secondary;
 // Fonts
 $font-stack-primary: "Open Sans", Helvetica, Arial, sans-serif;
 $font-stack-secondary: Helvetica, Arial, sans-serif;

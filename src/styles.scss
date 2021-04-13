@@ -42,3 +42,28 @@ button {
 .container {
     max-width: 1580px;
 }
+
+//
+// Todo -- Move it OUT //
+//
+/*Products Section*/
+.products,
+.shopping-cart {
+    // background-color: $color-bg-secondary;
+    background-color: yellowgreen;
+    font-family: $font-stack-primary;
+    padding-bottom: 8rem;
+    .title {
+        font-size: 69px;
+        font-weight: $font-light;
+    }
+    .cart-counter {
+        font-size: 22px;
+        color: $color-primary;
+        margin-left: 1rem;
+    }
+    .products-list {
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+}

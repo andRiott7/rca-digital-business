@@ -1,16 +1,91 @@
-<!-- Products-Section -->
-<section class="cart">
+<!-- Cart-Section -->
+<section class="shopping-cart">
     <div class="container">
         <div class="row justify-content-around align-items-center py-5">
             <div class="title col-12 text-left">
                 Cart
             </div>
         </div>
-        <div class="row justify-content-around align-items-center py-5">
-            <div class="col-6">
-                <div class="img"></div>
-
+        <div class="row justify-content-around align-items-center pt-3 pb-4">
+            <div class="col-4 col-sm-6 d-flex flex-column flex-sm-row justify-content-start">
+                <div class="product-img order-2 order-sm-1">
+                    <img src="../../assets/img/product_02.png" class="img-fluid" alt="">
+                </div>
+                <div class="pl-0 pl-sm-4 order-1 order-sm-2">
+                    <div class="title-product">
+                        <h3> Cyberpunk </h3>
+                    </div>
+                    <div class="category-product py-2">
+                        <h4> PS4, PC </h4>
+                    </div>
+                </div>
             </div>
+            <div class="col-4 d-flex flex-row justify-content-end align-items-center px-4">
+                <button type="button" class="value-btn"> <img src="../../assets/img/btn_decrease.png" class="img-fluid"
+                        alt=""> </button>
+                <div class="counter"> {{ 1 }} </div>
+                <button type="button" class="value-btn"> <img src="../../assets/img/btn_increase.png" class="img-fluid"
+                        alt=""> </button>
+            </div>
+            <div class="col-4 col-sm-2 d-flex flex-row justify-content-end px-0">
+                <div class="price"> ${{ 200 }} </div>
+            </div>
+        </div>
+        <div class="row justify-content-around align-items-center pt-3 pb-4">
+            <div class="col-4 col-sm-6 d-flex flex-column flex-sm-row justify-content-start">
+                <div class="product-img order-2 order-sm-1">
+                    <img src="../../assets/img/product_03.png" class="img-fluid" alt="">
+                </div>
+                <div class="pl-0 pl-sm-4 order-1 order-sm-2">
+                    <div class="title-product">
+                        <h3> Days Gone </h3>
+                    </div>
+                    <div class="category-product py-2">
+                        <h4> PS4, PC </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 d-flex flex-row justify-content-end align-items-center px-4">
+                <button type="button" class="value-btn"> <img src="../../assets/img/btn_decrease.png" class="img-fluid"
+                        alt=""> </button>
+                <div class="counter"> {{ 1 }} </div>
+                <button type="button" class="value-btn"> <img src="../../assets/img/btn_increase.png" class="img-fluid"
+                        alt=""> </button>
+            </div>
+            <div class="col-4 col-sm-2 d-flex flex-row justify-content-end px-0">
+                <div class="price"> ${{ 127 }} </div>
+            </div>
+        </div>
+        <div class="row justify-content-around align-items-center pt-3 pb-4">
+            <div class="col-4 col-sm-6 d-flex flex-column flex-sm-row justify-content-start">
+                <div class="product-img order-2 order-sm-1">
+                    <img src="../../assets/img/product_04.png" class="img-fluid" alt="">
+                </div>
+                <div class="pl-0 pl-sm-4 order-1 order-sm-2">
+                    <div class="title-product">
+                        <h3> Cyberpunk </h3>
+                    </div>
+                    <div class="category-product py-2">
+                        <h4> PS4, PC </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 d-flex flex-row justify-content-end align-items-center px-4">
+                <button type="button" class="value-btn"> <img src="../../assets/img/btn_decrease.png" class="img-fluid"
+                        alt=""> </button>
+                <div class="counter"> {{ 1 }} </div>
+                <button type="button" class="value-btn"> <img src="../../assets/img/btn_increase.png" class="img-fluid"
+                        alt=""> </button>
+            </div>
+            <div class="col-4 col-sm-2 d-flex flex-row justify-content-end px-0">
+                <div class="price"> ${{ 60 }} </div>
+            </div>
+        </div>
+
+
+        <div class="total-value row justify-content-end align-items-center py-5">
+            <div class="pr-5"> Total </div>
+            <div class="price"> ${{ 387 }} </div>
         </div>
     </div>
 </section>

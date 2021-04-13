@@ -50,26 +50,7 @@ header {
     }
 
 }
-/*Products Section*/
-.products,
-.cart {
-    background-color: $color-bg;
-    font-family: $font-stack-primary;
-    padding-bottom: 8rem;
-    .title {
-        font-size: 69px;
-        font-weight: $font-light;
-    }
-    .cart-counter {
-        font-size: 22px;
-        color: $color-primary;
-        margin-left: 1rem;
-    }
-    .products-list {
-        margin-left: -12px;
-        margin-right: -12px;
-    }
-}
+
 /*Footer*/
 footer {
     background-color: $colog-bg-dark;
