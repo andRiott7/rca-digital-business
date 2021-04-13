@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ProductItemComponent } from './product/product-item/product-item.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { ShoppingCartService } from './shopping-cart/shopping-cart.service';
 
 @NgModule({
     declarations: [
@@ -30,6 +31,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     ],
     providers: [
         ProductService,
+        ShoppingCartService,
         {
             provide: LOCALE_ID,
             useValue: 'en-US'
