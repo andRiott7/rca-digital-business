@@ -25,6 +25,14 @@ export class ShoppingCartComponent implements OnInit {
         this.shoppingCartService.addItem(item)
     }
 
+    increaseQty(item: any) {
+        this.shoppingCartService.increaseQty(item)
+    }
+
+    decreaseQty(item: any) {
+        this.shoppingCartService.decreaseQty(item)
+    }
+
     total(): number {
         return this.shoppingCartService.total()
     }

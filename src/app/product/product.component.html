@@ -1,5 +1,5 @@
 <div class="products-list row justify-content-center align-items-center"  >
-    <product-item *ngFor="let p of products" [product]="p" (add)="addProductItem($event)" ></product-item>
+    <product-item *ngFor="let p of products" [product]="p" (add)="shoppingCart.addItem($event)" ></product-item>
 </div>
-
+<shopping-cart #shoppingCart ></shopping-cart>
 
