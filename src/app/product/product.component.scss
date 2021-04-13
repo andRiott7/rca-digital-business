@@ -38,4 +38,14 @@
         margin-bottom: 19px;
 
     }
+
+    &.selected {
+        border: 2px solid $color-primary;
+        .price {
+            background-color: $color-primary !important;
+        }
+        .cart-btn {
+            background-color: $red;
+        }
+    }
 }
