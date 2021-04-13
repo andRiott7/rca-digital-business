@@ -1,5 +1,5 @@
 <!-- Cart-Section -->
-<section class="shopping-cart">
+<section class="shopping-cart" *ngIf="items().length">
     <div class="container">
         <div class="row justify-content-around align-items-center py-5">
             <div class="title col-12 text-left">
@@ -38,7 +38,7 @@
         </div>
         <div class="total-value row justify-content-end align-items-center py-5">
             <div class="pr-5"> Total </div>
-            <div class="price"> ${{ total() }} </div>
+            <div class="price pl-5"> ${{ total() }} </div>
         </div>
     </div>
 </section>

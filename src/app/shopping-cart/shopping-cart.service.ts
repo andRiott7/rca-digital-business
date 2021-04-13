@@ -3,7 +3,9 @@ import { Product } from '../product/product-item/product.model';
 import { CartItem } from './cart-item.model';
 
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class ShoppingCartService {
     items: CartItem[] = []
 
