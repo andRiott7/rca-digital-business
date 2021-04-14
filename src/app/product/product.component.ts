@@ -13,7 +13,7 @@ export class ProductComponent implements OnInit {
 
   products!: Product[];
 
-  // @Input() item!: CartItem;
+  @Input() item!: CartItem;
 
   constructor(
       private productService: ProductService,

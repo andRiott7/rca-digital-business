@@ -1,6 +1,8 @@
 @import "../../assets/scss/_variables";
 /*Footer*/
 footer {
+    position: absolute;
+    width: 100%;
     background-color: $colog-bg-dark;
     padding-top: 2rem;
     padding-bottom: 2rem;
