@@ -1,0 +1,10 @@
+@import "../../assets/scss/_variables";
+/*Footer*/
+footer {
+    background-color: $colog-bg-dark;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    .text {
+        color: $color-primary;
+    }
+}

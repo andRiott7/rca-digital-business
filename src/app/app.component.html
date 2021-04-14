@@ -1,1 +1,28 @@
-<router-outlet></router-outlet>
+<div [@opacityAnimations]="loadAnimation(outlet)">
+    <!-- Header -->
+    <header>
+        <div class="container pt-3">
+            <div class="row justify-content-around align-items-center">
+                <div class="logo col-6 d-flex flex-row justify-content-start align-items-center text-left">
+                    <img src="assets/img/logo.png" class="img-fluid" alt="RCA logo">
+                    <div class="title-page">
+                        <h2> Products </h2>
+                    </div>
+                </div>
+                <div class="login col-6 d-flex flex-row justify-content-end align-items-center">
+                    <rca-login-form></rca-login-form>
+                </div>
+            </div>
+        </div>
+        <!--Banner-Section-->
+        <section class="banner">
+            <div class="container text-center">
+                <img src="assets/img/banner.png" class="img-fluid m-auto" alt="Banner">
+            </div>
+        </section>
+    </header>
+    <router-outlet #outlet="outlet"></router-outlet>
+    <!-- Footer -->
+    <rca-footer></rca-footer>
+</div>
+''

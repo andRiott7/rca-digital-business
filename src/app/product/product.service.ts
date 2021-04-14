@@ -59,7 +59,15 @@ export class ProductService {
             category: 'PS4, XBOX, Nintendo, PC',
             price: 179,
             imagePath: '../../assets/img/product_07.png'
+        },
+        {
+            id: 8,
+            title: 'Tony Hawks',
+            category: 'PS4',
+            price: 199,
+            imagePath: '../../assets/img/product_08.png'
         }
+
     ]
     constructor( private http: HttpClient) { }
 

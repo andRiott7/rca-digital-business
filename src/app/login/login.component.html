@@ -7,13 +7,21 @@
             aria-controls="loginPanel">
             Login
         </button>
+
         <div id="loginPanel" class="login-panel collapse">
-            <form>
+
+            {{ form.valid }}
+            {{ form.value | json }}
+            <div class="arrow mx-auto"> </div>
+            <form #form="ngForm">
+
                 <div class="form-group">
-                    <input type="email" class="form-control" id="InputEmail" required placeholder="E-mail">
+                    <input type="email" class="form-control" id="InputEmail" name="email" placeholder="E-mail"
+                        maxlength="64" ngModel required>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="inputPassword" required placeholder="Password">
+                    <input type="password" class="form-control" id="inputPassword" name="password"
+                        placeholder="Password" minlength="4" maxlength="32" ngModel required>
                 </div>
                 <button type="button" class="login-btn">LOGIN</button>
             </form>

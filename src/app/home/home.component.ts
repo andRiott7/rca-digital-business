@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { PAGE_TITLE } from 'src/globals';
+
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor( private titleService: Title ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.titleService.setTitle(`${PAGE_TITLE} - Products`)
   }
 
 }

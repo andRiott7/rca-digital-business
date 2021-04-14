@@ -1,5 +1,19 @@
-<div class="products-list row justify-content-center align-items-center"  >
-    <product-item *ngFor="let p of products" [product]="p" (add)="shoppingCart.addItem($event)" ></product-item>
-</div>
+<section class="products">
+    <div class="container">
+        <div class="row justify-content-around align-items-center py-5">
+            <div class="title col-6 text-left">
+                Products
+            </div>
+            <div class="cart col-6 d-flex flex-row align-items-center justify-content-end">
+                <a class="nav" href="#shoppingCart" [routerLink]="['/shopping-cart']">
+                    <img src="assets/img/cart.png" class="img-fluid" alt="Shopping cart">
+                </a>
+                <div class="cart-counter"> {{ 0 }} </div>
+            </div>
+        </div>
+        <div class="products-list row justify-content-center align-items-center"  >
+            <product-item *ngFor="let p of products" [product]="p" (add)="shoppingCart.addItem($event)" ></product-item>
+        </div>
+    </div>
+</section>
 <shopping-cart #shoppingCart ></shopping-cart>
-

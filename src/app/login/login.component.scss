@@ -9,14 +9,25 @@
         padding-right: 3rem;
         display: none;
     }
+
     .login-panel {
         position: absolute;
         top: 4.5rem;
         right: -6.5rem;
+        .arrow {
+            width: 30px;
+            height: 30px;
+            border-top: $solid-rule-form;
+            border-left: $solid-rule-form;
+            transform: rotate(45deg) translateY(23px);
+            background-color: $color-bg;
+            padding-top: 2rem;
+            padding-right: 2rem;
+         }
         form {
             background-color: $color-bg;
             padding: 28px;
-            border: 1px solid $color-border;
+            border: $solid-rule-form;
             border-radius: 6px;
             width: 350px;
             height: auto;

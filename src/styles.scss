@@ -41,16 +41,37 @@ button {
 /*Containers*/
 .container {
     max-width: 1580px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 //
 // Todo -- Move it OUT //
 //
+
+/*Header*/
+header {
+    height: 100vh;
+    .logo {
+        height: 101px;
+        width: 244px;
+    }
+    .title-page > h2 {
+        font-size: 22px;
+        font-family: $font-stack-primary;
+        color: $color-primary;
+    }
+    .banner {
+        img {
+            max-width: 65%;
+        }
+    }
+}
 /*Products Section*/
 .products,
 .shopping-cart {
     // background-color: $color-bg-secondary;
-    background-color: yellowgreen;
+    background-color: #ecece0;
     font-family: $font-stack-primary;
     padding-bottom: 8rem;
     .title {

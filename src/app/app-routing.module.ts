@@ -1,12 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component'
+import { ProductComponent } from './product/product.component'
+import { ShoppingCartComponent } from './product/shopping-cart/shopping-cart.component'
 
 const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: 'home', component: HomeComponent },
-    { path: 'shopping-cart', component: ShoppingCartComponent },
+    { path: 'home', component: HomeComponent,
+        children: [
+            { path: '', redirectTo: 'home', pathMatch: 'full' },
+            { path: 'product', redirectTo: 'ProductComponent'},
+            { path: 'shopping-cart', redirectTo: 'ShoppingCartComponent'}
+        ]
+    },
+    // { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({

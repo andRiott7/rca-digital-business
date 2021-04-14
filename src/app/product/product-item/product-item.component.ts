@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Product } from './product.model';
+import { CartItem } from '../shopping-cart/cart-item.model';
 
 @Component({
   selector: 'product-item',
@@ -10,7 +11,11 @@ import { Product } from './product.model';
 export class ProductItemComponent implements OnInit {
 
   @Input() product!: Product
+
   @Output() add = new EventEmitter()
+  @Output() increaseQty = new EventEmitter<CartItem>()
+  @Output() decreaseQty = new EventEmitter<CartItem>()
+  @Output() remove = new EventEmitter<CartItem>()
 
   constructor() { }
 
@@ -20,4 +25,16 @@ export class ProductItemComponent implements OnInit {
   emitAddEvent() {
       this.add.emit(this.product);
   }
+  emitIncreaseQty(item: CartItem){
+    this.increaseQty.emit(item)
+  }
+
+  emitDecreaseQty(item: CartItem){
+    this.decreaseQty.emit(item)
+  }
+
+  emitRemove(item: CartItem){
+    this.remove.emit(item)
+  }
+
 }
