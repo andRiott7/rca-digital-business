@@ -15,6 +15,7 @@ import { ShoppingCartComponent } from './product/shopping-cart/shopping-cart.com
 import { ShoppingCartService } from './product/shopping-cart/shopping-cart.service';
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
+import { LocalStorageService } from './login/local-storage.service';
 
 @NgModule({
     declarations: [
@@ -37,6 +38,7 @@ import { FooterComponent } from './footer/footer.component';
     providers: [
         ProductService,
         ShoppingCartService,
+        LocalStorageService,
         {
             provide: LOCALE_ID,
             useValue: 'en-US'

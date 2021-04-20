@@ -1,4 +1,4 @@
-<div class="product-item">
+<div class="product-item" #productBox [ngClass]=" isSelected ? 'selected' : '' ">
     <div class="header">
         <div class="title-product">
             <h3> {{ product.title }}</h3>
@@ -14,6 +14,12 @@
         <img [src]="product.imagePath" class="img-fluid" alt="Product image">
     </div>
     <div class="text-center">
-        <button  (click)="emitAddEvent()" class="cart-btn " type="button"> Add to Cart </button>
+        <!-- <ng-container *ngIf="!isSelected" >
+            <button  (click)="emitAddEvent()" class="cart-btn " type="button" > {{ buttonName }} </button>
+        </ng-container>
+        <ng-container *ngIf="isSelected" >
+            <button  (click)="emitRemoveEvent()" class="cart-btn " type="button" > {{ buttonName }}</button>
+        </ng-container> -->
+        <button  (click)="emitAddEvent()" class="cart-btn " type="button" > {{ buttonName }} </button>
     </div>
 </div>

@@ -1,32 +1,40 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { Product } from './product-item/product.model'
 import { ProductService } from './product.service';
+import { ShoppingCartService } from './shopping-cart/shopping-cart.service'
 import { CartItem } from './shopping-cart/cart-item.model';
 
 @Component({
-  selector: 'rca-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.scss']
+    selector: 'rca-product',
+    templateUrl: './product.component.html',
+    styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
 
-  products!: Product[];
+    toggleCart: boolean = false;
 
-  @Input() item!: CartItem;
+    cartAmount: number = 0;
 
-  constructor(
-      private productService: ProductService,
-      private route: ActivatedRoute,
-      private router: Router
+    products?: Product[];
 
-  ) { }
+    item?: Observable<CartItem[]>;
 
-  ngOnInit() {
-      this.products = this.productService.getProducts();
-  }
+    // @Input() item!: CartItem;
 
-  addProductItem(product: Product) {
-    console.log(product)
-  }
+    constructor(
+        public shoppingCartService: ShoppingCartService,
+        private productService: ProductService,
+        private route: ActivatedRoute,
+        private router: Router
+    ) { }
+
+    ngOnInit() {
+        this.products = this.productService.getProducts();
+    }
+
+    addProductItem() {
+        return this.cartAmount
+    }
 }

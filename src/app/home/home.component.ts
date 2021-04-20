@@ -4,7 +4,7 @@ import { PAGE_TITLE } from 'src/globals';
 
 
 @Component({
-  selector: 'app-home',
+  selector: 'rca-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })

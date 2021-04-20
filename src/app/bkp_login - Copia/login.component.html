@@ -9,8 +9,8 @@
         </button>
 
         <div id="loginPanel" class="login-panel collapse">
-            {{ form.valid }}
-            {{ form.value | json }}
+            <!-- {{ form.valid }}
+            {{ form.value | json }} -->
             <div class="arrow mx-auto"> </div>
             <form #form="ngForm">
 
@@ -27,33 +27,3 @@
         </div>
     </div>
 </div>
-
-<!-- <h4> Add person </h4>
-<table>
-    <tr>
-        <td>E-mail</td>
-        <td> <input [(ngModel)]="email" name="email" type="text"></td>
-    </tr>
-    <tr>
-        <td>Password</td>
-        <td> <input [(ngModel)]="password" name="password" type="text"></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td><button (click)="addPerson()">Add</button></td>
-    </tr>
-</table>
-
-<h4> Get person </h4>
-
-<input [(ngModel)]="queryKey" name="queryKey" type="text">
-<br>
-<button (click)="getPerson(queryKey)"> Get </button>
-
-<h4>Result</h4>
-{{queryResult}}
-<h4> Delete person</h4>
-<input [(ngModel)]="removeKey" name="removeKey" type="text"> <br>
-<button (click)="deletePerson(removeKey)"> Delete </button>
-<h4> Reset store </h4>
-<button (click)="reset()"> Reset </button> -->

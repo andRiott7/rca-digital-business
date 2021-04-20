@@ -9,7 +9,6 @@ import { Observable } from 'rxjs';
 
 export class ProductService {
 
-
     products: Product[] = [
         {
             id: 1,
@@ -64,8 +63,29 @@ export class ProductService {
             id: 8,
             title: 'Tony Hawks',
             category: 'PS4',
-            price: 199,
+            price: 75,
             imagePath: '../../assets/img/product_08.png'
+        },
+        {
+            id: 9,
+            title: 'Outriders',
+            category: 'PS4',
+            price: 99,
+            imagePath: '../../assets/img/product_09.png'
+        },
+        {
+            id: 10,
+            title: 'Final Fantasy',
+            category: 'PS4',
+            price: 199,
+            imagePath: '../../assets/img/product_10.png'
+        },
+        {
+            id: 11,
+            title: 'GTA V',
+            category: 'PS4, PS3, XBOX',
+            price: 114,
+            imagePath: '../../assets/img/product_11.png'
         }
 
     ]
@@ -74,10 +94,5 @@ export class ProductService {
     getProducts(): Product[] {
         return this.products;
     }
-
-    // productItem(id: string): Observable<Product[]>{
-    //     return this.http.get(product)
-    //      .map
-    // }
 
 }

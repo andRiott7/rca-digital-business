@@ -6,12 +6,12 @@
     padding: 16px;
     margin: 12px;
     min-width: 368px;
+    border: 2px solid transparent;
 
     .header {
         margin-bottom: 32px;
         font-weight: $font-bold;
         font-style: italic;
-        font
         .title-product > h3 {
             font-size: 33px;
         }
@@ -46,6 +46,12 @@
         }
         .cart-btn {
             background-color: $red;
+
+            &:hover {
+                border: 2px solid $red;
+                background-color: $color-bg;
+                color: $red;
+            }
         }
     }
 }

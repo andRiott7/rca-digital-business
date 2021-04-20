@@ -30,6 +30,11 @@ export class AppComponent {
         }
     }
 
+    // Click to Scroll
+    scrollTo(el: HTMLElement) {
+        el.scrollIntoView({ behavior: 'smooth' });
+    }
+
     loadAnimation(outlet: RouterOutlet) {
         return (outlet && outlet.isActivated ? outlet.activatedRoute : '');
     }

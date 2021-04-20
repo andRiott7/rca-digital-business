@@ -82,6 +82,9 @@ header {
         font-size: 22px;
         color: $color-primary;
         margin-left: 1rem;
+        background-color: transparent;
+        border: none;
+        width: 1rem;
     }
     .products-list {
         margin-left: -12px;
