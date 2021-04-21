@@ -6,13 +6,20 @@ The repository width the bundle to start the project can be find [here].
 
 [here]: https://github.com/andRiott7/rca-digital-business
 
-## 1. Steps to start
+## Steps to start
 
-### Install the dependencies
+### 1. Install the dependencies
 
-Run `npm install`
+Run the command `npm install`
 
-## 2. Initialize ther server
+## Initialize ther server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` or `npm start`. Navigate to `http://localhost:4200/`
 
+### 2. Install the json-server
+
+Run `npm install -g json-server` 
+
+## Start JSON Server
+
+Run `json-server db.json`. Navigate to `http://localhost:3000/`
