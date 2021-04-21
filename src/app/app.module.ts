@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
 import { ProductService } from './product/product.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ProductItemComponent } from './product/product-item/product-item.component';
 import { ShoppingCartComponent } from './product/shopping-cart/shopping-cart.component';
@@ -16,6 +16,7 @@ import { ShoppingCartService } from './product/shopping-cart/shopping-cart.servi
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { LocalStorageService } from './login/local-storage.service';
+import { BaseService } from './shared/base.service';
 
 @NgModule({
     declarations: [
@@ -32,6 +33,7 @@ import { LocalStorageService } from './login/local-storage.service';
         AppRoutingModule,
         HttpClientModule,
         FormsModule,
+        ReactiveFormsModule,
         BrowserAnimationsModule,
         RouterModule
     ],
@@ -39,6 +41,7 @@ import { LocalStorageService } from './login/local-storage.service';
         ProductService,
         ShoppingCartService,
         LocalStorageService,
+        BaseService,
         {
             provide: LOCALE_ID,
             useValue: 'en-US'

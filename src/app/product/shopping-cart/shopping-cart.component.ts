@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output, ViewChild } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { ShoppingCartService } from './shopping-cart.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ShoppingCartComponent implements OnInit {
 
     @Output() any = new EventEmitter()
-   // @Output() total = new EventEmitter();
+    @Output() getValue = new EventEmitter();
 
     constructor(
         public shoppingCartService: ShoppingCartService,
@@ -22,7 +22,8 @@ export class ShoppingCartComponent implements OnInit {
     }
 
     items(): any[] {
-        return this.shoppingCartService.items;
+        return this.shoppingCartService.items
+        this.getValue.emit({ getValue: this.items })
     }
 
     removeItem(item: any) {

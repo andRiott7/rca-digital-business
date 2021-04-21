@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Product } from './product-item/product.model'
@@ -17,9 +17,9 @@ export class ProductComponent implements OnInit {
 
     cartAmount: number = 0;
 
-    products?: Product[];
+    products!: Product[];
 
-    item?: Observable<CartItem[]>;
+    item!: Observable<CartItem[]>;
 
     // @Input() item!: CartItem;
 
@@ -31,8 +31,14 @@ export class ProductComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        this.products = this.productService.getProducts();
+        this.getProducts()
     }
+
+    getProducts() {
+        this.productService.getProducts()
+            .subscribe( result => this.products = result )
+    }
+
 
     addProductItem() {
         return this.cartAmount

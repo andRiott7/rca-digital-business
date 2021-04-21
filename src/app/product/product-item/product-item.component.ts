@@ -13,7 +13,7 @@ export class ProductItemComponent implements OnInit {
     public isSelected: boolean = false
     public buttonName: string = 'Add to Cart'
 
-    @Input() product?: Product
+    @Input() product!: Product
 
     @Output() add = new EventEmitter()
     @Output() remove = new EventEmitter()

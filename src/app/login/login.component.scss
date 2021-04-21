@@ -9,21 +9,29 @@
         padding-right: 3rem;
         display: none;
     }
-
+    .arrow {
+        width: 30px;
+        height: 30px;
+        border-top: $solid-rule-form;
+        border-left: $solid-rule-form;
+        transform: rotate(45deg);
+        background-color: $color-bg;
+        padding-top: 2rem;
+        padding-right: 2rem;
+        position: absolute;
+        right: 9rem;
+        top: -1rem;
+    }
     .login-panel {
         position: absolute;
-        top: 4.5rem;
-        right: -6.5rem;
-        .arrow {
-            width: 30px;
-            height: 30px;
-            border-top: $solid-rule-form;
-            border-left: $solid-rule-form;
-            transform: rotate(45deg) translateY(24px);
-            background-color: $color-bg;
-            padding-top: 2rem;
-            padding-right: 2rem;
-         }
+        top: 5.745rem;
+        right: 0;
+        @media (min-width: $lg) {
+            right: -2rem;
+        }
+        @media (min-width: $xxl) {
+            right: -8rem;
+        }
         form {
             background-color: $color-bg;
             padding: 28px;

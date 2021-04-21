@@ -1,5 +1,4 @@
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Title } from '@angular/platform-browser';
 import { Router, RouterOutlet } from '@angular/router';
