@@ -7,7 +7,7 @@
             <h4> {{ product.category }} </h4>
         </div>
         <div class="price text-center">
-            ${{ product.price }}
+            {{ product.price | currency : 'USD' : 'symbol' : '1.0-0'}}
         </div>
     </div>
     <div class="img-product text-center">
