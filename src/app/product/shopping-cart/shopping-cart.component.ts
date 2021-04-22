@@ -28,6 +28,19 @@ export class ShoppingCartComponent implements OnInit {
             .getCartItems(this.route.parent?.snapshot.params['id'])
     }
 
+    displayCart() {
+        if (this.router.url === '/shopping-cart') {
+            return {
+                'display': 'initial'
+            };
+        }
+        else  {
+            return {
+                'display': 'none'
+            };
+        }
+    }
+
     items(): any[] {
         return this.shoppingCartService.items
     }

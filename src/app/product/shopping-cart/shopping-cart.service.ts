@@ -16,12 +16,12 @@ export class ShoppingCartService {
         this.items = []
     }
 
-    addItem(item:Product) {
-        let foundItem = this.items.find((pItem)=> pItem.product.id === item.id)
-        if(foundItem){
-          this.increaseQty(foundItem)
-        }else{
-          this.items.push(new CartItem(item))
+    addItem(item: Product) {
+        let foundItem = this.items.find((pItem) => pItem.product.id === item.id)
+        if (foundItem) {
+            this.increaseQty(foundItem)
+        } else {
+            this.items.push(new CartItem(item))
         }
     }
 
@@ -45,4 +45,6 @@ export class ShoppingCartService {
             .map(item => item.value())
             .reduce((prev, value) => prev + value, 0)
     }
+
+
 }

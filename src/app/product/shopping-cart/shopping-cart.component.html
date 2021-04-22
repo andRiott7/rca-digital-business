@@ -1,44 +1,53 @@
 <!-- Cart-Section -->
-<section class="shopping-cart" *ngIf="items().length">
-    <div class="container">
-        <div class="row justify-content-around align-items-center py-5">
-            <div class="title col-12 text-left">
-                Cart
+<div [ngStyle]="displayCart()">
+    <section class="shopping-cart" *ngIf="items().length">
+        <div class="container">
+            <div class="row justify-content-around align-items-center py-5">
+                <div class="title col-12 text-left">
+                    Cart
+                </div>
+            </div>
+            <div class="row justify-content-around align-items-center pt-3 pb-4" *ngFor="let item of items()">
+                <div class="col-4 col-sm-6 d-flex flex-column flex-sm-row justify-content-start">
+                    <div class="product-img order-2 order-sm-1">
+                        <img [src]="item.product.imagePath" class="img-fluid" alt="">
+                    </div>
+                    <div class="pl-0 pl-sm-4 order-1 order-sm-2">
+                        <div class="title-product">
+                            <h3> {{ item.product.title }} </h3>
+                        </div>
+                        <div class="category-product py-2">
+                            <h4> {{ item.product.category }} </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 d-flex flex-row justify-content-end align-items-center px-4">
+                    <button type="button" class="value-btn" (click)="decreaseQty(item)"> <img
+                            src="../../assets/img/btn_decrease.png" class="img-fluid" alt=""> </button>
+                    <div class="counter"> {{ item.quantity }} </div>
+                    <button type="button" class="value-btn" (click)="increaseQty(item)"> <img
+                            src="../../assets/img/btn_increase.png" class="img-fluid" alt=""> </button>
+                </div>
+                <div class="col-4 col-sm-2 d-flex flex-row justify-content-end px-0">
+                    <div class="price"> {{ item.value() | currency : 'USD' : 'symbol' : '1.0-0' }} </div>
+                </div>
+            </div>
+            <div class="total-value row justify-content-end align-items-center py-5">
+                <div class="pr-5"> Total </div>
+                <div class="price pl-5"> {{ total() | currency : 'USD' : 'symbol' : '1.0-0' }} </div>
             </div>
         </div>
-        <div *ngIf="!items().length">
+    </section>
+    <section class="shopping-cart" *ngIf="!items().length">
+        <div class="container">
+            <div class="row justify-content-around align-items-center py-5">
+                <div class="title col-12 text-left">
+                    Cart
+                </div>
+            </div>
             <p class="text-center py-5">
                 YOUR CART IS EMPTY
             </p>
         </div>
-        <div class="row justify-content-around align-items-center pt-3 pb-4" *ngFor="let item of items()">
-            <div class="col-4 col-sm-6 d-flex flex-column flex-sm-row justify-content-start">
-                <div class="product-img order-2 order-sm-1">
-                    <img [src]="item.product.imagePath" class="img-fluid" alt="">
-                </div>
-                <div class="pl-0 pl-sm-4 order-1 order-sm-2">
-                    <div class="title-product">
-                        <h3> {{ item.product.title }} </h3>
-                    </div>
-                    <div class="category-product py-2">
-                        <h4> {{ item.product.category }} </h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4 d-flex flex-row justify-content-end align-items-center px-4">
-                <button type="button" class="value-btn" (click)="decreaseQty(item)" > <img src="../../assets/img/btn_decrease.png" class="img-fluid"
-                        alt=""> </button>
-                <div class="counter"> {{ item.quantity }} </div>
-                <button type="button" class="value-btn" (click)="increaseQty(item)"> <img src="../../assets/img/btn_increase.png" class="img-fluid"
-                        alt=""> </button>
-            </div>
-            <div class="col-4 col-sm-2 d-flex flex-row justify-content-end px-0">
-                <div class="price"> {{ item.value() | currency : 'USD' : 'symbol' : '1.0-0' }} </div>
-            </div>
-        </div>
-        <div class="total-value row justify-content-end align-items-center py-5">
-            <div class="pr-5"> Total </div>
-            <div class="price pl-5"> {{ total() | currency : 'USD' : 'symbol' : '1.0-0' }} </div>
-        </div>
-    </div>
-</section>
+    </section>
+</div>

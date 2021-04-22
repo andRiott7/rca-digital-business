@@ -19,9 +19,7 @@ export class ProductComponent implements OnInit {
 
     products!: Product[];
 
-    item!: Observable<CartItem[]>;
-
-    // @Input() item!: CartItem;
+    // item!: Observable<CartItem[]>;
 
     constructor(
         public shoppingCartService: ShoppingCartService,
@@ -36,11 +34,19 @@ export class ProductComponent implements OnInit {
 
     getProducts() {
         this.productService.getProducts()
-            .subscribe( result => this.products = result )
+            .subscribe(result => this.products = result)
     }
-
 
     addProductItem() {
         return this.cartAmount
+    }
+    cartItems(): CartItem[] {
+        return this.productService.cartItems()
+    }
+    increaseQty(item: CartItem) {
+        this.productService.increaseQty(item)
+    }
+    decreaseQty(item: CartItem) {
+        this.productService.decreaseQty(item)
     }
 }
