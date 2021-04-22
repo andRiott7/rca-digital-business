@@ -33,12 +33,12 @@
                         alt=""> </button>
             </div>
             <div class="col-4 col-sm-2 d-flex flex-row justify-content-end px-0">
-                <div class="price"> ${{ item.value() }} </div>
+                <div class="price"> {{ item.value() | currency : 'USD' : 'symbol' : '1.0-0' }} </div>
             </div>
         </div>
         <div class="total-value row justify-content-end align-items-center py-5">
             <div class="pr-5"> Total </div>
-            <div class="price pl-5"> ${{ total() }} </div>
+            <div class="price pl-5"> {{ total() | currency : 'USD' : 'symbol' : '1.0-0' }} </div>
         </div>
     </div>
 </section>
