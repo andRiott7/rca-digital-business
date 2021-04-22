@@ -2,6 +2,10 @@
 .shopping-cart {
     color: $color-text-secondary;
     font-size: 30px;
+    .cart-empty {
+        height: 50vh;
+        width: 100%;
+    }
     .product-img {
         height: 145px;
         width: 126px;

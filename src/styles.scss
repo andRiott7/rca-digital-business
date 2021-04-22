@@ -2,7 +2,7 @@
 @import "assets/scss/variables";
 
 /*Fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,800&display=swap");
 
 /*Base-Styles*/
 html,
@@ -31,6 +31,11 @@ button {
         background-color: $color-bg;
         color: $color-primary;
     }
+
+    @media (max-width: $xs) {
+        height: 54px;
+        width: 106px;
+    }
 }
 .cart-btn {
     @extend .login-btn;
@@ -40,7 +45,19 @@ button {
 }
 /*Containers*/
 .container {
-    max-width: 1580px;
+    max-width: 98%;
+    @media (min-width: $xs) {
+        max-width: 96%;
+    }
+    @media (min-width: $lg) {
+        max-width: 94%;
+    }
+    @media (min-width: $xl) {
+        max-width: 92%;
+    }
+    @media (min-width: $xxl) {
+        max-width: 1580px;
+    }
 }
 
 //
@@ -58,17 +75,30 @@ header {
         font-size: 22px;
         font-family: $font-stack-primary;
         color: $color-primary;
+
+        @media (max-width: $xs) {
+            margin-top: 8rem;
+        }
     }
     .banner {
+        height: 100%;
         img {
-            @media(max-width: $sm) {
-                max-width: 98%;
+            @media (max-width: $sm) {
+                max-width: 99%;
             }
-            @media(max-width: $lg) {
-                max-width: 80%;
+            @media (max-width: $lg) {
+                max-width: 96%;
             }
-            max-width: 65%;
-
+            @media (max-width: $xl) {
+                max-width: 94%;
+            }
+            max-width: 66%;
+        }
+        @media (max-width: $lg) {
+            .container,
+            .row {
+                height: 100%;
+            }
         }
     }
 }
@@ -87,11 +117,9 @@ header {
         font-size: 22px;
         color: $color-primary;
         margin-left: 1rem;
-
     }
     .products-list {
         margin-left: -12px;
         margin-right: -12px;
     }
 }
-

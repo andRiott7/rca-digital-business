@@ -1,6 +1,8 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { ShoppingCartService } from './shopping-cart.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ProductService } from '../product.service';
+import { Observable } from 'rxjs';
 
 @Component({
     selector: 'shopping-cart',
@@ -10,20 +12,24 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ShoppingCartComponent implements OnInit {
 
     @Output() any = new EventEmitter()
-    @Output() getValue = new EventEmitter();
+    // @Output() getValue = new EventEmitter();
+
+    getValue!: Observable<any>
 
     constructor(
         public shoppingCartService: ShoppingCartService,
+        private productService: ProductService,
         private route: ActivatedRoute,
         private router: Router
     ) { }
 
     ngOnInit() {
+        this.getValue = this.productService
+            .getCartItems(this.route.parent?.snapshot.params['id'])
     }
 
     items(): any[] {
         return this.shoppingCartService.items
-        this.getValue.emit({ getValue: this.items })
     }
 
     removeItem(item: any) {

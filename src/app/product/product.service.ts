@@ -20,4 +20,9 @@ export class ProductService extends BaseService {
         .pipe(catchError(this.handleError));
     }
 
+    getCartItems(id: string): Observable<any>{
+        return this.http.get(`${RCA_API}/shopping-cart`)
+        .pipe(catchError(this.handleError));
+      }
+
 }

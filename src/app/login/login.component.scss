@@ -19,8 +19,11 @@
         padding-top: 2rem;
         padding-right: 2rem;
         position: absolute;
-        right: 9rem;
+        right: 10rem;
         top: -1rem;
+        @media (max-width: $xl) {
+            right: 2.5rem;
+        }
     }
     .login-panel {
         position: absolute;

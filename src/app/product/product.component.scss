@@ -45,12 +45,12 @@
             background-color: $color-primary !important;
         }
         .cart-btn {
-            background-color: $red;
+            background-color: $color-danger;
 
             &:hover {
-                border: 2px solid $red;
+                border: 2px solid $color-danger;
                 background-color: $color-bg;
-                color: $red;
+                color: $color-danger;
             }
         }
     }
